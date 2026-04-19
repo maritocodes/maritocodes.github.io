@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 import Button from "../../components/Button";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useLoading } from "../../LoadingContext";
 
 interface ProjectInterface {
