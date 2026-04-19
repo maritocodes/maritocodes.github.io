@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className="relative w-full flex justify-between items-stretch pl-40 text-left text-white">
       <div id="about" className="absolute -top-48" />
-      <div className="w-[58ch]">
+      <div className="w-55/100 pr-12">
         <h3>About me</h3>
         <ScrollReveal>
           <p className="pt-6 text-2xl text-gray-200 py-20">

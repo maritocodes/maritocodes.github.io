@@ -9,12 +9,12 @@ const handleProjectsClick = () => {
 function Hero() {
   return (
     <section
-      className="pl-40 w-screen h-[90dvh] flex items-center justify-center"
+      className="pl-40 w-full h-[90dvh] flex items-center justify-center"
       id="home"
     >
       <div className="w-55/100 text-left">
         <div>
-          <h1 className="">Mario Luis</h1>
+          <h1>Mario Luis</h1>
           <h2>
             Technical Gameplay Designer
             <br />& Game Developer

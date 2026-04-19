@@ -16,10 +16,18 @@
 }
 
 @keyframes swing {
-  25% { transform: rotate(4deg); }
-  50% { transform: rotate(-2deg); }
-  75% { transform: rotate(1deg); }
-  100% { transform: rotate(0deg); }
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .animate-swing {
@@ -27,17 +35,17 @@
 }
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
+  --text: #9ca3af;
+  --text-h: #fff;
+  --bg: #16171d;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(47, 48, 58, 0.5);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
 
   --sans: "Nunito", system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: "Nunito", system-ui, "Segoe UI", Roboto, sans-serif;
@@ -45,7 +53,7 @@
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
+  color-scheme: dark; /* Esto asegura que las barras de scroll e inputs nativos se vean oscuros */
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -58,24 +66,9 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+/* Regla para iconos sociales (movida fuera del media query) */
+#social .button-icon {
+  filter: invert(1) brightness(2);
 }
 
 #root {
@@ -89,62 +82,68 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
+  body {
+    margin: 0;
+  }
 
-h1 {
-  font-size: 72px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
+  h1,
+  h2 {
+    font-family: var(--heading);
+    font-weight: 500;
+    color: var(--text-h) !important;
+  }
+
+  h1 {
+    font-size: 72px;
+    margin: 32px 0;
+    @media (max-width: 1024px) {
+      font-size: 36px;
+      margin: 20px 0;
+    }
+    @apply font-extrabold;
+  }
+  h2 {
     font-size: 36px;
-    margin: 20px 0;
+    line-height: 118%;
+    letter-spacing: 2px;
+    margin: 0 0 8px;
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
+    @apply font-medium;
   }
-  @apply font-extrabold;
-}
-h2 {
-  font-size: 36px;
-  line-height: 118%;
-  letter-spacing: 2px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+  h3 {
+    @apply text-4xl text-white font-extrabold uppercase;
   }
-  @apply font-medium;
-}
 
-h3 {
-  @apply text-4xl text-white font-extrabold uppercase;
-}
+  h4 {
+    @apply text-3xl text-white font-extrabold capitalize mb-1 text-left;
+  }
 
-h4 {
-  @apply text-3xl text-white font-extrabold capitalize mb-1 text-left;
-}
+  p {
+    margin: 0;
+  }
 
-p {
-  margin: 0;
-}
+  code,
+  .counter {
+    font-family: var(--mono);
+    display: inline-flex;
+    border-radius: 4px;
+    color: var(--text-h);
+  }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  code {
+    font-size: 15px;
+    line-height: 135%;
+    padding: 4px 8px;
+    background: var(--code-bg);
+  }
 }
 
 .bt-primary,
@@ -172,9 +171,9 @@ code {
   @apply !capitalize !font-medium !text-xl min-h-0 !py-3 !rounded-xl !w-fit bg-gray-500;
 }
 
-.bt-sidebar{
+.bt-sidebar {
   @apply flex flex-col text-white uppercase shadow-inner-custom bg-[#243655] items-center px-3 pt-2 pb-1 rounded-xl gap-1
   hover:scale-110 hover:brightness-110 hover:cursor-pointer
   active:scale-90 active:brightness-75
-  transition-all ease-in-out duration-200;;
+  transition-all ease-in-out duration-200;
 }
