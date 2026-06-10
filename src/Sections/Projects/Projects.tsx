@@ -14,19 +14,18 @@ const Projects = () => {
       <ScrollReveal>
         <Project
           title="Venator (VR)"
-          role="Gameplay Programmer & Lead Designer"
+          role="Lead gameplay Programmer & Designer"
           duration="3 months"
           blender
           unity
           github="https://github.com/venator-XR/venator-vr"
           li={[
             "Led a team of six to develop a VR horror experience",
+            "Implemented core VR gameplay systems including interaction, inventory, and gameplay sequences using C#",
+            "Built gameplay flow systems connecting exploration, cinematics, and boss encounters",
+            "Developed reusable interaction logic for doors, triggers, pickups, and environmental events",
             "Designed a linear, narrative-driven gameplay experience",
             "Built immersive and tense atmosphere through scale, limited visibility and lighting",
-            "Iterated on core gameplay direction, getting concepts to a polished experience",
-            "Designed intuitive VR interactions and a quick-switch inventory system to maintain flow between exploration and combat",
-            "Directed audio design by defining placement and usage of SFX to enhance atmosphere",
-            "Led overall design decisions, refining ideas into a cohesive and achievable vision",
           ]}
           vid="/vids/VenatorVid.mp4"
         />
@@ -37,17 +36,17 @@ const Projects = () => {
       <ScrollReveal>
         <Project
           title="Baifo's Farm"
-          role="Gameplay Programmer & Lead Designer"
+          role="Lead Gameplay Programmer & Designer"
           itchLink="https://maritocreates.itch.io/baifos-farm"
           duration="5 months"
           max
           unity
           github="https://github.com/boregxrd/BaifosFarm"
           li={[
-            "Lead Designer & Gameplay Programmer in a 6-person team",
-            "Led design by consolidating ideas into cohesive and scalable gameplay systems",
-            "Designed resource management loop focused on feeding, collecting and selling to drive progression",
-            "Developed economy creating player decisions and incentivation to keep playing",
+            "Led feature development and coordinated gameplay implementation across the team",
+            "Implemented economy, UI, and gameplay progression systems using C#",
+            "Developed a persistent economy system handling game state across multiple scenes",
+            "Built a dynamic entity spawning system with collision-aware placement logic",
             "Iterated balance and progression pacing for different playstyles",
             "Created and integrated 3D assets",
           ]}
@@ -66,8 +65,8 @@ const Projects = () => {
           blender
           unity
           li={[
-            "Solo developer, Game Jam winner (48h scope)",
-            "Designed platforming loop based on revealing paths",
+            "Solo developer, winner at the university's Global Game Jam event (48h scope)",
+            "Implemented character movement, abilities, and gameplay systems using C#",
             "Created an ability that shifts the environment, enabling temporary additional platforms",
             "Designed movement mechanics to support player recovery and reduce frustation",
             "Developed and integrated all 3D assets to support gameplay atmosphere",

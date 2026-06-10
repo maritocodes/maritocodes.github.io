@@ -9,19 +9,18 @@ const handleProjectsClick = () => {
 function Hero() {
   return (
     <section
-      className="pl-40 w-full h-[90dvh] flex items-center justify-center"
+      className="pl-32 w-full h-[90dvh] flex items-center justify-center"
       id="home"
     >
       <div className="w-55/100 text-left">
         <div>
           <h1>Mario Luis</h1>
           <h2>
-            Technical Gameplay Designer
-            <br />& Game Developer
+            Game Developer &<br />
+            Gameplay Programmer
           </h2>
           <p className="text-2xl max-w-[35ch] pt-4">
-            Designing and implementing gameplay systems with a strong focus on
-            player experience and immersion.
+            Building gameplay systems and interactive experiences through code, rapid prototyping, and iteration.
           </p>
         </div>
 

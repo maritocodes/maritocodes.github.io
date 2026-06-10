@@ -37,10 +37,10 @@ const Skills = () => {
           />
         </SkillBox>
 
-        <SkillBox title="Design">
+        <SkillBox title="Development">
           <SkillCard title="Gameplay Systems" />
-          <SkillCard title="Player Experience & Feel" />
-          <SkillCard title="Prototyping & Iteration" />
+          <SkillCard title="Character Controller" />
+          <SkillCard title="State Machines" />
         </SkillBox>
 
         <SkillBox cage>
@@ -56,10 +56,10 @@ const Skills = () => {
           />
         </SkillBox>
 
-        <SkillBox title="Technical">
+        <SkillBox title="Programming">
           <SkillCard img="/icons/csharp.svg" title="C# OOP" invert />
           <SkillCard img="/icons/cpp.webp" title="C++ OOP" invert />
-          <SkillCard img="/icons/unity.svg" title="Unity" />
+          <SkillCard title="SOLID Principles" />
         </SkillBox>
 
         <SkillBox cage>
@@ -76,10 +76,10 @@ const Skills = () => {
           />
         </SkillBox>
 
-        <SkillBox title="Others">
-          <SkillCard img="/icons/blender.svg" title="Blender" />
+        <SkillBox title="Tools">
+          <SkillCard img="/icons/unity.svg" title="Unity" />
           <SkillCard img="/icons/github.svg" title="GitHub" invert />
-          <SkillCard title="Agile/SCRUM" />
+          <SkillCard img="/icons/blender.svg" title="Blender" />
         </SkillBox>
       </SkillsCarousel>
     </section>

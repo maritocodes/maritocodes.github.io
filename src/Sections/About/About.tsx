@@ -2,24 +2,20 @@ import ScrollReveal from "../../components/ScrollReveal";
 
 const About = () => {
   return (
-    <section className="relative w-full flex justify-between items-stretch pl-40 text-left text-white">
+    <section className="relative w-full flex justify-between items-stretch pl-32 text-left text-white">
       <div id="about" className="absolute -top-48" />
-      <div className="w-55/100 pr-12">
+      <div className="w-55/100 pr-20">
         <h3>About me</h3>
         <ScrollReveal>
-          <p className="pt-6 text-2xl text-gray-200 py-20">
-            Technical Gameplay Designer with experience leading small teams (4–6
-            people) and developing complete games in Unity. I focus on designing
-            and iterating on gameplay systems to create engaging and polished
-            player experiences.
+          <p className="pt-6 text-2xl text-gray-200 pb-20 text-justify">
+            Gameplay Programmer and Game Developer with experience building
+            complete games in Unity, leading small teams, and developing
+            gameplay systems from concept to implementation.
             <br />
             <br />
-            I work hands-on with implementation, allowing me to quickly
-            prototype ideas and refine them directly in-engine.
-            <br />
-            <br />
-            My background in 3D art and texturing allows me to work efficiently
-            across the full pipeline.
+            My background spans gameplay programming, systems design, and 3D
+            content creation, allowing me to collaborate across the full
+            development pipeline and rapidly prototype new ideas.
           </p>
         </ScrollReveal>
       </div>
